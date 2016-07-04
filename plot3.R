@@ -2,6 +2,9 @@
 ## is in the top level for the repo (which is assumed as the working directory)
 source("Dataprep.R")
 
+## open png graphics device
+png(filename = "plot3.png")
+
 ## set graphical parameter to single graph (incase set otherwise)
 par(mfrow =c(1,1))
 
@@ -15,7 +18,4 @@ with(data,lines(datetime,Sub_metering_3, col = "blue"))
 label <- c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
 legend("topright", legend = label, col = c("black","blue","red"), lwd = 1)
 
-
-## Copy graph to png file
-dev.copy(png, file = "plot3.png")
 dev.off()

@@ -2,6 +2,9 @@
 ## is in the top level for the repo (which is assumed as the working directory)
 source("Dataprep.R")
 
+## open png graphics device
+png(filename = "plot4.png")
+
 ## set graphical parameter to 2 by 2 matrix of graphs
 par(mfrow = c(2,2))
 
@@ -25,6 +28,6 @@ with(data, {
         
 })
 
-## Copy graph to png file
-dev.copy(png, file = "plot4.png")
+
+
 dev.off()
